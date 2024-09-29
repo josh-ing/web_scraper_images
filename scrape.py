@@ -32,8 +32,9 @@ def download_images(url, output_dir, start_num=100):
     #         continue
 
     # Specify the indices of the images you want to download (not 0 index backed)
-    indices_to_download = [5, 7]
+    indices_to_download = [0]
     # uniqlo: 5, 7
+    # dover street: 0
 
     # Iterate through the specified indices and download the corresponding images
     # Comment this out if you want to download every image
@@ -80,6 +81,6 @@ def download_images(url, output_dir, start_num=100):
         #     print(f"Failed to download {img_url}: {e}")
 
 # Example usage
-url = 'https://www.uniqlo.com/us/en/products/E465755-000/01?colorDisplayCode=40&sizeDisplayCode=003'  # Replace with the website URL you want to scrape
+url = 'https://shop-us.doverstreetmarket.com/collections/craig-green/products/craig-green-laced-hoodie-blackcre-cgaw23cjehdy01-aw23'  # Replace with the website URL you want to scrape
 output_dir = 'downloaded_images'  # Directory to save the images
 download_images(url, output_dir)
