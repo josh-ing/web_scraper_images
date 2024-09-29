@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 from urllib.parse import urljoin
 
 # Function to download images from a URL
-def download_images(url, output_dir, start_num=100):
+def download_images(url, output_dir, start_num=1):
     # Create directory if it doesn't exist
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
@@ -32,8 +32,8 @@ def download_images(url, output_dir, start_num=100):
     #         continue
 
     # Specify the indices of the images you want to download (not 0 index backed)
-    indices_to_download = [0]
-    # uniqlo: 5, 7
+    indices_to_download = [8]
+    # uniqlo: start at 4 since it includes the headers 0-4
     # dover street: 0
 
     # Iterate through the specified indices and download the corresponding images
@@ -81,6 +81,6 @@ def download_images(url, output_dir, start_num=100):
         #     print(f"Failed to download {img_url}: {e}")
 
 # Example usage
-url = 'https://shop-us.doverstreetmarket.com/collections/craig-green/products/craig-green-laced-hoodie-blackcre-cgaw23cjehdy01-aw23'  # Replace with the website URL you want to scrape
+url = 'https://www.uniqlo.com/us/en/products/E472856-000/00?colorDisplayCode=36'  # Replace with the website URL you want to scrape
 output_dir = 'downloaded_images'  # Directory to save the images
 download_images(url, output_dir)
