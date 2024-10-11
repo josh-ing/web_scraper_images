@@ -26,7 +26,7 @@ def download_images(url, output_dir, start_num=200):
     img_tags = soup.find_all('img')
 
     # Specify the indices of the images you want to download (not 0 index based)
-    indices_to_download = [11]
+    indices_to_download = [5]
 
     # Iterate through the specified indices and download the corresponding images
     for index in indices_to_download:
@@ -66,6 +66,6 @@ def download_images(url, output_dir, start_num=200):
             print(f"Index {index} is out of range for the number of images found.")
 
 # Example usage
-url = 'https://www2.hm.com/en_us/productpage.1232384004.html'  # Replace with the website URL you want to scrape
+url = 'https://bananarepublic.gap.com/browse/product.do?pid=538151002&cid=3033741&pcid=48422&vid=1#pdp-page-content'  # Replace with the website URL you want to scrape
 output_dir = 'downloaded_images'  # Directory to save the images
 download_images(url, output_dir)
